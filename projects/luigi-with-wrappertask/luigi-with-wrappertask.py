@@ -24,6 +24,8 @@ class NoOutPut(luigi.Task):
 
     def run(self):
         sleep(3)
+        with open('data/nothing.txt','w') as f:
+            f.write('nothing')
         print('No output is done')
 
     def complete(self):
